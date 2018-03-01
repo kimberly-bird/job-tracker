@@ -59,7 +59,7 @@ namespace job_tracker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("JobId,Title,Notes,CompanyId,ContactId")] Job job)
+        public async Task<IActionResult> Create([Bind("JobId,Title,Notes,CompanyId,ContactId,Applied,Interviewed")] Job job)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace job_tracker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("JobId,Title,Notes,CompanyId,ContactId")] Job job)
+        public async Task<IActionResult> Edit(int id, [Bind("JobId,Title,Notes,CompanyId,ContactId,Applied,Interviewed")] Job job)
         {
             if (id != job.JobId)
             {

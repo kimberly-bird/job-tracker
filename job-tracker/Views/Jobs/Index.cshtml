@@ -12,17 +12,23 @@
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Title)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Notes)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Notes)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Company)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Applied)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Interviewed)
             </th>
             <th></th>
         </tr>
@@ -41,6 +47,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Contact.Email)
+            </td>
+            <td>
+                @Html.CheckBoxFor(modelItem => item.Applied)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Interviewed)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.JobId">Edit</a> |

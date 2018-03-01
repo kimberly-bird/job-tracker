@@ -13,6 +13,10 @@ namespace job_tracker.Models
 
         public string Notes { get; set; }
 
+        public bool Applied { get; set; } = false;
+
+        public bool Interviewed { get; set; } = false;
+
         [Required]
         public int CompanyId { get; set; }
         public Company Company { get; set; }
