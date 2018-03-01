@@ -16,6 +16,10 @@ namespace job_tracker.Models
 
         public string Notes { get; set; }
 
+        [Required]
+        public int CompanyId { get; set; }
+        public Company Company { get; set; }
+
         public virtual ICollection<Job> Jobs { get; set; }
     }
 }

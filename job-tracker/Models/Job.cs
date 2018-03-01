@@ -13,5 +13,12 @@ namespace job_tracker.Models
 
         public string Notes { get; set; }
 
+        [Required]
+        public int CompanyId { get; set; }
+        public Company Company { get; set; }
+
+        [Required]
+        public int ContactId { get; set; }
+        public Contact Contact { get; set; }
     }
 }
