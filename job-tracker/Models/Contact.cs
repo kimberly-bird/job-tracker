@@ -3,17 +3,18 @@ using System.ComponentModel.DataAnnotations;
 
 namespace job_tracker.Models
 {
-    public class Company
+    public class Contact
     {
         [Key]
-        public int CompanyId { get; set; }
+        public int ContactId { get; set; }
 
         [Required]
         public string Name { get; set; }
 
-        public string Notes { get; set; }
+        [Required]
+        public string Email { get; set; }
 
-        public virtual ICollection<Contact> Contacts { get; set; }
+        public string Notes { get; set; }
 
         public virtual ICollection<Job> Jobs { get; set; }
     }
